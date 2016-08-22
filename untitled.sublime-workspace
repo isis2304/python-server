@@ -1,0 +1,2585 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"json",
+				"json"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"__",
+				"__dict__"
+			],
+			[
+				"_",
+				"__init__"
+			],
+			[
+				"stmt",
+				"stmt_2"
+			],
+			[
+				"get",
+				"get_instance"
+			],
+			[
+				"co",
+				"coroutine"
+			],
+			[
+				"set",
+				"set_status"
+			],
+			[
+				"to",
+				"tornado"
+			],
+			[
+				"tota",
+				"total_size"
+			],
+			[
+				"toa",
+				"total_number"
+			],
+			[
+				"total",
+				"total_number"
+			],
+			[
+				"func",
+				"functools"
+			],
+			[
+				"depa",
+				"departure_day"
+			],
+			[
+				"wee",
+				"weekday"
+			],
+			[
+				"arr",
+				"arrival_airport"
+			],
+			[
+				"arra",
+				"arrival_airport_code"
+			],
+			[
+				"de",
+				"departure_time"
+			],
+			[
+				"depart",
+				"departure_airport_code"
+			],
+			[
+				"ai",
+				"airports"
+			],
+			[
+				"arrival",
+				"arrival_airport"
+			],
+			[
+				"arri",
+				"arrival_airport"
+			],
+			[
+				"air",
+				"airline"
+			],
+			[
+				"depat",
+				"departure_day"
+			],
+			[
+				"sear",
+				"search_data"
+			],
+			[
+				"AS",
+				"AsIs"
+			],
+			[
+				"s",
+				"start"
+			],
+			[
+				"ge",
+				"get_body_argument"
+			],
+			[
+				"is",
+				"iso_code"
+			],
+			[
+				"gt",
+				"get_instance"
+			],
+			[
+				"return",
+				"returnobj"
+			],
+			[
+				"col",
+				"col_names"
+			],
+			[
+				"ie",
+				"iter_order"
+			],
+			[
+				"PA",
+				"PASSWORD"
+			],
+			[
+				"some",
+				"some_list"
+			],
+			[
+				"re",
+				"__repr__"
+			],
+			[
+				"print",
+				"print_tree"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"AIR",
+				"AIRLINES"
+			],
+			[
+				"dep",
+				"departure_airport"
+			],
+			[
+				"A",
+				"AIRLINES"
+			],
+			[
+				"dea",
+				"departure_time"
+			],
+			[
+				"flig",
+				"flight_number"
+			],
+			[
+				"try",
+				"try	Try/Except/Else/Finally"
+			],
+			[
+				"com",
+				"commit"
+			],
+			[
+				"stop",
+				"stop_insertion"
+			],
+			[
+				"fli",
+				"flight_stops"
+			],
+			[
+				"flo",
+				"flight_stops"
+			],
+			[
+				"ex",
+				"execute"
+			],
+			[
+				"fligh",
+				"flight_number"
+			],
+			[
+				"str",
+				"strptime"
+			],
+			[
+				"airpo",
+				"airports"
+			],
+			[
+				"fl",
+				"flight"
+			],
+			[
+				"IN",
+				"IntegrityError"
+			],
+			[
+				"pas",
+				"passenger_id"
+			],
+			[
+				"RE",
+				"REFERENCES"
+			],
+			[
+				"pa",
+				"passenger_id"
+			],
+			[
+				"CO",
+				"COUNTRIES"
+			],
+			[
+				"INTE",
+				"INTERVAL"
+			],
+			[
+				"NEW",
+				"NEWLINE"
+			],
+			[
+				"proces",
+				"process_escape_secuences"
+			],
+			[
+				"file",
+				"filename"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"op",
+				"op_reg"
+			],
+			[
+				"ins",
+				"instruction_type"
+			],
+			[
+				"gua",
+				"guard_name"
+			],
+			[
+				"guard",
+				"guard_list"
+			],
+			[
+				"prog",
+				"program_generation"
+			],
+			[
+				"pro",
+				"process_general_operation"
+			],
+			[
+				"guar",
+				"guards_line"
+			],
+			[
+				"ass",
+				"assignment_gen"
+			],
+			[
+				"expr",
+				"expr_reg"
+			],
+			[
+				"var",
+				"var_reg"
+			],
+			[
+				"as",
+				"assign_info"
+			],
+			[
+				"LE",
+				"LEQ"
+			],
+			[
+				"GE",
+				"GE_L"
+			],
+			[
+				"cmp",
+				"cmp_inst"
+			],
+			[
+				"oper",
+				"operator_instr"
+			],
+			[
+				"boo",
+				"boolean_operators"
+			],
+			[
+				"exp",
+				"expr_reg"
+			],
+			[
+				"all",
+				"allocate_register_aux"
+			],
+			[
+				"ax",
+				"auxiliar_vars"
+			],
+			[
+				"MO",
+				"MOD"
+			],
+			[
+				"T",
+				"TIMES"
+			],
+			[
+				"free",
+				"free_registers_aux"
+			],
+			[
+				"POW",
+				"POWER"
+			],
+			[
+				"por",
+				"process_single_constant"
+			],
+			[
+				"index",
+				"index_store"
+			],
+			[
+				"fun",
+				"func_type"
+			],
+			[
+				"fre",
+				"free_registers_aux"
+			],
+			[
+				"proc",
+				"process_single_var"
+			],
+			[
+				"pr",
+				"process_simple_operand"
+			],
+			[
+				"reg",
+				"reg_alloc"
+			],
+			[
+				"ret",
+				"ret_reg"
+			],
+			[
+				"aux",
+				"auxiliar_vars"
+			],
+			[
+				"ty",
+				"type_equivalence"
+			],
+			[
+				"arg",
+				"arg_calc"
+			],
+			[
+				"RET",
+				"RET_INT"
+			],
+			[
+				"add",
+				"addr_info"
+			],
+			[
+				"read",
+				"read_func"
+			],
+			[
+				"bin",
+				"bin_size"
+			],
+			[
+				"fr",
+				"free_registers"
+			],
+			[
+				"in",
+				"instruction"
+			],
+			[
+				"instr",
+				"instruction"
+			],
+			[
+				"ini",
+				"initialization"
+			],
+			[
+				"scop",
+				"scope_variables"
+			],
+			[
+				"N",
+				"NEWLINE_VAL"
+			],
+			[
+				"SPA",
+				"SPACE_VAL"
+			],
+			[
+				"var_",
+				"var_lvl"
+			],
+			[
+				"_read",
+				"_readint"
+			],
+			[
+				"inst",
+				"instr_prototype"
+			],
+			[
+				"proce",
+				"process_assignment"
+			],
+			[
+				"va",
+				"var_list"
+			],
+			[
+				"opera",
+				"operators"
+			],
+			[
+				"not",
+				"not_compress"
+			],
+			[
+				"au",
+				"aux2_node"
+			],
+			[
+				"comma",
+				"comma_detection"
+			],
+			[
+				"opr",
+				"operator"
+			],
+			[
+				"c",
+				"c_node"
+			],
+			[
+				"w",
+				"w_node"
+			],
+			[
+				"chid",
+				"children"
+			],
+			[
+				"comm",
+				"comma_collection"
+			],
+			[
+				"child",
+				"children"
+			],
+			[
+				"las",
+				"last_addr"
+			],
+			[
+				"_ty",
+				"_type"
+			],
+			[
+				"imp",
+				"impl"
+			],
+			[
+				"impl",
+				"impl_f"
+			],
+			[
+				"__t",
+				"_types_"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "static/index.html",
+			"settings":
+			{
+				"buffer_size": 17116,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 1073,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "routes.py",
+			"settings":
+			{
+				"buffer_size": 748,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rest/flights_rest.py",
+			"settings":
+			{
+				"buffer_size": 1740,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/user.py",
+			"settings":
+			{
+				"buffer_size": 379,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/__init__.py",
+			"settings":
+			{
+				"buffer_size": 499,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "rest/users_rest.py",
+			"settings":
+			{
+				"buffer_size": 1160,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "logic/dao/flights_dao.py",
+			"settings":
+			{
+				"buffer_size": 2259,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "main.py",
+			"settings":
+			{
+				"buffer_size": 1611,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "logic/dao/decorators.py",
+			"settings":
+			{
+				"buffer_size": 820,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "static/js/tables.js",
+			"settings":
+			{
+				"buffer_size": 2321,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "data/schema.sql",
+			"settings":
+			{
+				"buffer_size": 3854,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "logic/tm.py",
+			"settings":
+			{
+				"buffer_size": 1350,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "logic/dao/utils.py",
+			"settings":
+			{
+				"buffer_size": 516,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "models/model.py",
+			"settings":
+			{
+				"buffer_size": 1434,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "web/flights_handler.py",
+			"settings":
+			{
+				"buffer_size": 364,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 232.0,
+		"last_filter": "termin",
+		"selected_items":
+		[
+			[
+				"termin",
+				"Terminal: Open in project folder"
+			],
+			[
+				"sspos",
+				"Set Syntax: SQL (PostgreSQL)"
+			],
+			[
+				"ssjava",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pep8",
+				"User: Python PEP8 Autoformat"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"ter",
+				"Terminal: Open in project folder"
+			],
+			[
+				"sssql",
+				"Set Syntax: SQL (PostgreSQL)"
+			],
+			[
+				"temr",
+				"Terminal: Open in project folder"
+			],
+			[
+				"sspy",
+				"Set Syntax: Python"
+			],
+			[
+				"term",
+				"Terminal: Open in project folder"
+			],
+			[
+				"spaces",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"ssp",
+				"Set Syntax: Python"
+			],
+			[
+				"ss",
+				"Set Syntax: Python"
+			],
+			[
+				"summ",
+				"Floobits - Summon Everyone"
+			],
+			[
+				"lis",
+				"Floobits - List Users"
+			],
+			[
+				"floo",
+				"Floobits - List Users"
+			],
+			[
+				"flobits per",
+				"Floobits - Open Workspace Settings (in Browser)"
+			],
+			[
+				"fl",
+				"Floobits - List Users"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"ssfre",
+				"Set Syntax: Free Pascal"
+			],
+			[
+				"ssfree",
+				"Set Syntax: Free Pascal"
+			],
+			[
+				"ssfr",
+				"Set Syntax: Free Pascal"
+			],
+			[
+				"temrin",
+				"Terminal: Open in project folder"
+			],
+			[
+				"termn",
+				"Terminal: Open in project folder"
+			],
+			[
+				"sspa",
+				"Set Syntax: Free Pascal"
+			],
+			[
+				"termon",
+				"Terminal: Open in project folder"
+			],
+			[
+				"sspython",
+				"Set Syntax: Python"
+			],
+			[
+				"sshtm",
+				"Set Syntax: HTML"
+			],
+			[
+				"sssh",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"termina",
+				"Terminal: Open"
+			],
+			[
+				"gam",
+				"Set Syntax: Gams Listing"
+			],
+			[
+				"gams",
+				"Gams: Switch between code and listing"
+			],
+			[
+				"ssc",
+				"Set Syntax: C"
+			],
+			[
+				"sspasc",
+				"Set Syntax: Pascal"
+			],
+			[
+				"sspas",
+				"Set Syntax: Pascal"
+			],
+			[
+				"pascal",
+				"Set Syntax: Pascal"
+			],
+			[
+				"ssgams",
+				"Set Syntax: Gams"
+			],
+			[
+				"ssgma",
+				"Set Syntax: Gams"
+			],
+			[
+				"op",
+				"Terminal: Open"
+			],
+			[
+				"open",
+				"Terminal: Open"
+			],
+			[
+				"trail",
+				"Trailing Spaces: Delete Trailing Spaces"
+			],
+			[
+				"git delete",
+				"Git: Delete Branch"
+			],
+			[
+				"git",
+				"Github: Repository"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"css",
+				"Run CSScomb"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"sscs",
+				"Set Syntax: CSS"
+			],
+			[
+				"pretti",
+				"HTMLPrettify"
+			],
+			[
+				"paca",
+				"Package Control: Install Package"
+			],
+			[
+				"beautify",
+				"HTMLBeautify"
+			],
+			[
+				"iden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ssjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"hml",
+				"HTMLBeautify"
+			],
+			[
+				"sslate",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"bow",
+				"bower Injector : inject dependencies"
+			],
+			[
+				"package control in",
+				"Package Control: Install Package"
+			],
+			[
+				"view",
+				"View In Browser"
+			],
+			[
+				"termila",
+				"Terminal: Open"
+			],
+			[
+				"sspla",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"trai",
+				"Trailing Spaces: Toggle Trailing Spaces Highlighting"
+			],
+			[
+				"",
+				"Trailing Spaces: Toggle Trailing Spaces Highlighting"
+			],
+			[
+				"termi",
+				"Terminal: Open in project folder"
+			],
+			[
+				"foll",
+				"Floobits - Follow Workspace Changes"
+			],
+			[
+				"stop",
+				"Floobits - Stop Following Workspace"
+			],
+			[
+				"htm",
+				"HTMLBeautify"
+			],
+			[
+				"l",
+				"Floobits - List Users"
+			],
+			[
+				"sspyth",
+				"Set Syntax: Python"
+			],
+			[
+				"idento",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"html",
+				"HTMLBeautify"
+			],
+			[
+				"bea",
+				"Javascript Beautify"
+			],
+			[
+				"o",
+				"Terminal: Open"
+			],
+			[
+				"ident",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"beaut",
+				"HTMLBeautify"
+			],
+			[
+				"ssja",
+				"Set Syntax: Java"
+			],
+			[
+				"java",
+				"Javascript Beautify"
+			],
+			[
+				"beau",
+				"HTMLBeautify"
+			],
+			[
+				"packe",
+				"Package Control: Install Package"
+			],
+			[
+				"python",
+				"User: Python PEP8 Autoformat"
+			],
+			[
+				"ja",
+				"Javascript Beautify"
+			],
+			[
+				"flo",
+				"Floobits - List Users"
+			],
+			[
+				"li",
+				"Floobits - List Users"
+			],
+			[
+				"diff",
+				"Git: Diff Tool All"
+			],
+			[
+				"set syntax: C",
+				"Set Syntax: C++11"
+			],
+			[
+				"set syntax: C++",
+				"Set Syntax: C++"
+			],
+			[
+				"jva",
+				"Javascript Beautify"
+			],
+			[
+				"f",
+				"Floobits - Join Workspace"
+			],
+			[
+				"javas",
+				"Javascript Beautify"
+			],
+			[
+				"be",
+				"Javascript Beautify"
+			],
+			[
+				"follow",
+				"Floobits - Follow Workspace Changes"
+			],
+			[
+				"Lis",
+				"Floobits - List Users"
+			],
+			[
+				"follo",
+				"Floobits - Stop Following Workspace"
+			],
+			[
+				"users",
+				"Floobits - List Users"
+			],
+			[
+				"h",
+				"HTMLBeautify"
+			],
+			[
+				"t",
+				"Terminal: Open"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"git push",
+				"Git: Push"
+			],
+			[
+				"git comm",
+				"Git: Commit"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"sql",
+				"Set Syntax: PL/SQL (Oracle)"
+			],
+			[
+				"console",
+				"Package Control: Install Package"
+			],
+			[
+				"hm",
+				"HTMLBeautify"
+			],
+			[
+				"identation",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ht",
+				"HTMLBeautify"
+			],
+			[
+				"dired",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"user",
+				"Preferences: Key Bindings - User"
+			],
+			[
+				"Pa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 406.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"python main.py",
+			"import numpy as np",
+			"tes",
+			"test",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/andfoy/Documentos/supercell",
+		"/home/andfoy/Documentos/supercell/logic",
+		"/home/andfoy/Documentos/supercell/models",
+		"/home/andfoy/Documentos/supercell/rest",
+		"/home/andfoy/Documentos/supercell/web"
+	],
+	"file_history":
+	[
+		"/home/andfoy/Documentos/Neural_Segmentation/train/ls_output",
+		"/home/andfoy/Documentos/supercell/models/__init__.py",
+		"/home/andfoy/Documentos/supercell/web/__init__.py",
+		"/home/andfoy/Documentos/supercell/.gitignore",
+		"/home/andfoy/Documentos/supercell/rest/__init__.py",
+		"/home/andfoy/.config/sublime-text-3/Packages/User/View In Browser.sublime-settings",
+		"/home/andfoy/.config/sublime-text-3/Packages/View In Browser/View In Browser.sublime-settings",
+		"/home/andfoy/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/andfoy/Documentos/supercell/models/model.py",
+		"/home/andfoy/Documentos/supercell/logic/dao/users_dao.py",
+		"/home/andfoy/Documentos/supercell/web/users_handler.py",
+		"/home/andfoy/Documentos/supercell/db/dbconn.py",
+		"/home/andfoy/Documentos/supercell/logic/dao/__init__.py",
+		"/home/andfoy/Documentos/supercell/logic/dao/decorators.py",
+		"/home/andfoy/Documentos/supercell/logic/dao/flights_dao.py",
+		"/home/andfoy/Documentos/supercell/logic/dao/countries_dao.py",
+		"/home/andfoy/Documentos/supercell/logic/tm.py",
+		"/home/andfoy/Documentos/supercell/requirements.txt",
+		"/home/andfoy/Documentos/supercell/models/user.py",
+		"/home/andfoy/Documentos/github-webhooks/index.html",
+		"/home/andfoy/Documentos/supercell/static/index.html",
+		"/home/andfoy/Documentos/supercell/web/flights_handler.py",
+		"/home/andfoy/Documentos/supercell/web/countries_handler.py",
+		"/home/andfoy/Documentos/supercell/routes.py",
+		"/home/andfoy/Documentos/supercell/main.py",
+		"/home/andfoy/Documentos/supercell/logic/dao/utils.py",
+		"/home/andfoy/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/andfoy/Documentos/supercell/web/utils.py",
+		"/home/andfoy/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/andfoy/.config/sublime-text-3/Packages/User/JSON.sublime-settings",
+		"/home/andfoy/Documentos/supercell/data/populate_tables.py",
+		"/home/andfoy/Documentos/supercell/test.py",
+		"/home/andfoy/Documentos/supercell/db/__init__.py",
+		"/home/andfoy/Documentos/supercell/logic/__init__.py",
+		"/home/andfoy/Documentos/supercell/data/contents/airlines.csv",
+		"/home/andfoy/Documentos/supercell/data/contents/flight_stops.csv",
+		"/home/andfoy/Documentos/supercell/data/contents/airports.csv",
+		"/home/andfoy/Documentos/supercell/data/contents/countries.csv",
+		"/home/andfoy/Documentos/supercell/data/contents/flights.csv",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Sistrans/sis-fibo/schema.sql",
+		"/home/andfoy/.cache/.fr-4alaBX/airlines.csv",
+		"/home/andfoy/.cache/.fr-tIaFxI/countries.csv",
+		"/home/andfoy/.cache/.fr-Qrj1Bc/airports.csv",
+		"/home/andfoy/.cache/.fr-ik0GEM/flights.csv",
+		"/home/andfoy/.cache/.fr-eB8Iu8/flight_stops.csv",
+		"/home/andfoy/.cache/.fr-XJXKgL/countries.csv",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/summation.vhcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/compiler/frontend/semantic.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/collatz.vhcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/eratosthenes.vhcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/fibonacci.vhcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/example4.vhcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/compile.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/doc/language/Inference_Rules.txt",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/compiler/backend/__init__.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/compiler/frontend/__init__.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/vm/atomic.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/collatz.hcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/test.hcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/semantic_test.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/vm/hardware.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/vm/info.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/doc/vm/commands.txt",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/vm/collatz.vhcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/example1.hcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/compiler/__init__.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/vm/selectionsort.vhcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/TODO.txt",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/fibased.hcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/dutchflag.hcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/doc/language/TYPE_Inference_Rules.txt",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/doc/language/LL_Grammar_Description.txt",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/compiler/frontend/lexer.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/doc/language/Instruction_And_Flow_Control_Dictionaries.txt",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/example4.hcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/vm/tabulate.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/vm/main.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/vm/utilities.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/compiler/frontend/parser.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/compiler/frontend/ll_table.py",
+		"/home/andfoy/Documentos/github-webhooks/main.py",
+		"/home/andfoy/Documentos/Universidad/2016/V_Semestre/Circuitos/ECG/Out.csv",
+		"/home/andfoy/Documentos/Universidad/2016/V_Semestre/Circuitos/ECG/INA.csv",
+		"/home/andfoy/Mapping/Colombia/Bogotá/data/edges.csv",
+		"/home/andfoy/Mapping/Colombia/Bogotá/data/nodes.csv",
+		"/home/andfoy/Documentos/Universidad/2016/V_Semestre/Optimización/Laboratorios/Lab_6/Files/shortest_path.lst",
+		"/home/andfoy/Documentos/Universidad/2016/V_Semestre/Optimización/Laboratorios/Lab_6/Files/shortest_path.gms",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/example3.hcl",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/vm/__init__.py",
+		"/home/andfoy/Documentos/Universidad/2016/V_Semestre/Optimización/Laboratorios/Lab_5/Files/shortest_path.gms",
+		"/home/andfoy/pattern.c",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/src/__init__.py",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/.gitignore",
+		"/home/andfoy/Documentos/Universidad/GUIA/HCL/examples/hcl/eratosthenes.hcl~",
+		"/home/andfoy/Documentos/Universidad/2016/V_Semestre/Optimización/Exámenes/Examen_2/Multi_Objective/Shortest_Path.txt",
+		"/home/andfoy/Documentos/Universidad/2016/V_Semestre/Optimización/Proyecto/E1/Assets/data.gms",
+		"/home/andfoy/Documentos/Universidad/2016/V_Semestre/Optimización/Exámenes/Examen_2/Multi_Objective/shortestPath_Multiobjective.gms",
+		"/home/andfoy/Documentos/Universidad/2016/V_Semestre/Optimización/Proyecto/E1/Assets/data_2.gms",
+		"/home/andfoy/Documentos/Universidad/2016/V_Semestre/Optimización/Exámenes/Examen_2/Multi_Objective/shortestPath_Multiobjective.lst",
+		"/home/andfoy/Descargas/ejercicioArchivos_4.GMS",
+		"/home/andfoy/Descargas/ejercicioArchivos_3.GMS",
+		"/home/andfoy/Descargas/ejercicioArchivos_2.GMS",
+		"/home/andfoy/Descargas/ejercicioArchivos_plantilla.GMS",
+		"/home/andfoy/Streaming/streaming/media/test.png",
+		"/home/andfoy/LaTeX_Editor/dist/css/AdminLTE.css",
+		"/home/andfoy/Documentos/Art Nouveau.tex",
+		"/home/andfoy/Documentos/Universidad/2016/V Semestre/Optimización/Laboratorios/Lab_4/Files/ex_2.gms",
+		"/home/andfoy/Documentos/Universidad/2016/V_Semestre/Optimización/Laboratorios/Lab_4/Files/ex_2.lst",
+		"/home/andfoy/Descargas/ejemplo_2.c",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Estructuras/Talleres_201610/Taller_4/Scraps/extract.py",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Estructuras/Talleres_201610/Taller_1/src/taller/mundo/SudokuLib.java",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Estructuras/Talleres_201610/Taller_1/docs/enunciado_Taller_1.tex",
+		"/home/andfoy/winetricks",
+		"/home/andfoy/IDEAM.txt",
+		"/home/andfoy/.config/sublime-text-3/Packages/TrailingSpaces/trailing_spaces.sublime-settings",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Sistrans/sis-fibo/static/listaOperaciones.html",
+		"/home/andfoy/.cache/.fr-IFNzJf/BancAndes/src/co/edu/uniandes/bancAndes/dao/ConsultaDAO.java",
+		"/home/andfoy/.cache/.fr-86luPx/BancAndes/src/fachada/BancAndes.java",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Sistrans/sis-fibo/model/queue_client/client.py",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Sistrans/sis-fibo/model/request_handler/web_socket.py",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Sistrans/sis-fibo/static/registrarOperacionCuentaCajero.html",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Sistrans/sis-fibo/static/js/web_sockets.js",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Sistrans/sis-fibo/static/registrarOperacionCuenta1.html",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Sistrans/sis-fibo/misc/operation_script.py",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Estructuras/Proyecto_3/data/info/arcos.csv",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Estructuras/Proyecto_3/data/info/centros_acopio.csv",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Sistrans/sis-fibo/static/sendemail.php",
+		"/home/andfoy/Documentos/Universidad/2015/IV Semestre/Sistrans/sis-fibo/model/queue_client/__init__.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"INTERVAL",
+			"VARCHAR",
+			"TIMETZ",
+			"MONEY",
+			"\".*\"",
+			",",
+			": \".*\"",
+			": \"",
+			":",
+			"get",
+			",",
+			"\\S*[,]",
+			"\\S*[,]?",
+			",",
+			"|",
+			"aaaaaa",
+			"AI",
+			"None",
+			"FVM",
+			"AVA",
+			"BEM",
+			"YAK",
+			"KWK",
+			"PKA",
+			"WNA",
+			"SFG",
+			"|",
+			"AM",
+			"J4",
+			"Buffalo",
+			"ND",
+			"|ADB|",
+			"LX",
+			"process_simple_operand",
+			"free_registers_aux",
+			"LE",
+			"allocation",
+			"SUB",
+			"ident(",
+			";",
+			"read",
+			"stat =",
+			"stat",
+			"ASSIGNMENT",
+			"exprs",
+			"lookup_var",
+			";",
+			"OP",
+			"print",
+			"Λ",
+			"process_expr_tree(node, debug=False)",
+			"M",
+			"C",
+			"R",
+			"J",
+			"O",
+			"Φ",
+			"Δ",
+			"Z",
+			"L",
+			"Γ",
+			"X",
+			"Ψ",
+			"Ω",
+			"Θ",
+			"CONTINUATION",
+			"GUARDCONT",
+			"Ĺ",
+			"GUARD",
+			"Ô",
+			"G",
+			"W",
+			"Π",
+			"ζ",
+			"Ξ",
+			"D",
+			"I",
+			"S",
+			"ASSIGN",
+			"H",
+			"print",
+			"count",
+			"count$",
+			"->",
+			"$",
+			"	",
+			"^.*[a-z]\\t",
+			"	",
+			"^.*[a-z]\\t",
+			"$",
+			"	",
+			"^.*[a-z]\\t",
+			"$",
+			"	",
+			"^.*[a-z]\\t",
+			"$",
+			"	",
+			"^.*[a-z]\\t",
+			"$",
+			"	",
+			"^.*[a-z]\\t",
+			"$",
+			"	",
+			"^.*[a-z]\\t",
+			"^{.*[a-z]}",
+			".*[a-z]\\t",
+			"	",
+			"$",
+			"	",
+			"$",
+			".",
+			"\\t",
+			",",
+			"$",
+			"	",
+			",",
+			"%",
+			"	",
+			",",
+			"	",
+			"$",
+			"	",
+			",",
+			"%",
+			"$",
+			",",
+			"	",
+			"%"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			",",
+			".",
+			"",
+			"-",
+			"   ",
+			"  ",
+			"",
+			"\\\\",
+			"\\n",
+			", ",
+			"",
+			"\\n",
+			"",
+			";",
+			" =",
+			"=",
+			" = ",
+			"= ",
+			" = ",
+			"[.].* = .*",
+			"this.",
+			"",
+			"self.logger",
+			"logger.info",
+			"logger",
+			"log",
+			"pika.log",
+			"",
+			"\n",
+			"",
+			"\n",
+			"",
+			");",
+			"",
+			"src=\"{{ static_url(",
+			"expr_s",
+			"parseFloat",
+			"'#result'",
+			"\n		cmp[extracted_chunks], eax",
+			"offset_s",
+			"\\d",
+			"",
+			"VAR_REGEX",
+			"FUNC_REGEX",
+			"FUNCREGEX",
+			"main_list -> length"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "static/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 17116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1252,
+								1252
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Tornado/Tornado.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 688.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1073,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1072,
+								1072
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1387.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "routes.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 748,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "rest/flights_rest.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1740,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "models/user.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "models/__init__.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 499,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "rest/users_rest.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "logic/dao/flights_dao.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2259,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"file": "main.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1611,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "logic/dao/decorators.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 820,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								139,
+								139
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "static/js/tables.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								294,
+								294
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 399.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "data/schema.sql",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3854,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3228,
+								3228
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PostgreSQL Syntax Highlighting/PostgreSQL.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 672.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "logic/tm.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1350,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "logic/dao/utils.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 516,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "models/model.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1434,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "web/flights_handler.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 364,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 33.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.468834688347,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 124.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 124.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sq",
+				"data/schema.sql"
+			],
+			[
+				"index",
+				"static/index.html"
+			],
+			[
+				"",
+				"static/js/tables.js"
+			],
+			[
+				"tm",
+				"logic/tm.py"
+			],
+			[
+				"dec",
+				"logic/dao/decorators.py"
+			],
+			[
+				"ro",
+				"routes.py"
+			],
+			[
+				"fl",
+				"rest/flights_rest.py"
+			],
+			[
+				"flights",
+				"logic/dao/flights_dao.py"
+			],
+			[
+				"main",
+				"main.py"
+			],
+			[
+				"inde",
+				"static/index.html"
+			],
+			[
+				"mode",
+				"models/model.py"
+			],
+			[
+				"user",
+				"logic/dao/users_dao.py"
+			],
+			[
+				"users",
+				"logic/dao/users_dao.py"
+			],
+			[
+				"usre",
+				"web/users_handler.py"
+			],
+			[
+				"db",
+				"db/dbconn.py"
+			],
+			[
+				"mod",
+				"models/model.py"
+			],
+			[
+				"d",
+				"db/dbconn.py"
+			],
+			[
+				"sche",
+				"data/schema.sql"
+			],
+			[
+				"pop",
+				"data/populate_tables.py"
+			],
+			[
+				"fib",
+				"examples/hcl/fibonacci.hcl"
+			],
+			[
+				"sema",
+				"src/compiler/frontend/semantic.py"
+			],
+			[
+				"infer",
+				"doc/language/Inference_Rules.txt"
+			],
+			[
+				"test",
+				"examples/hcl/test.hcl"
+			],
+			[
+				"lex",
+				"src/compiler/frontend/lexer.py"
+			],
+			[
+				"se",
+				"src/compiler/frontend/semantic.py"
+			],
+			[
+				"code",
+				"src/compiler/backend/codegen.py"
+			],
+			[
+				"parse",
+				"src/compiler/frontend/parser.py"
+			],
+			[
+				"har",
+				"src/vm/hardware.py"
+			],
+			[
+				"ll",
+				"doc/language/LL_Grammar_Description.txt"
+			],
+			[
+				"lexer",
+				"src/compiler/frontend/lexer.py"
+			],
+			[
+				"lan",
+				"src/vm/lang.py"
+			],
+			[
+				"col",
+				"examples/vm/collatz.vhcl"
+			],
+			[
+				"exa",
+				"examples/hcl/example3.hcl"
+			],
+			[
+				"co",
+				"examples/vm/collatz.vhcl"
+			],
+			[
+				"colla",
+				"examples/hcl/collatz.hcl"
+			],
+			[
+				"tes",
+				"examples/hcl/test.hcl"
+			],
+			[
+				"aot",
+				"src/vm/atomic.py"
+			],
+			[
+				"inf",
+				"src/vm/info.py"
+			],
+			[
+				"ato",
+				"src/vm/atomic.py"
+			],
+			[
+				"te",
+				"examples/hcl/test.hcl"
+			],
+			[
+				"hard",
+				"src/vm/hardware.py"
+			],
+			[
+				"smea",
+				"src/semantic_test.py"
+			],
+			[
+				"ha",
+				"src/vm/hardware.py"
+			],
+			[
+				"dic",
+				"doc/language/Instruction_And_Flow_Control_Dictionaries.txt"
+			],
+			[
+				"semna",
+				"src/semantic_test.py"
+			],
+			[
+				"iner",
+				"doc/language/Inference_Rules.txt"
+			],
+			[
+				"h",
+				"src/vm/hardware.py"
+			],
+			[
+				"infe",
+				"doc/language/Inference_Rules.txt"
+			],
+			[
+				"sort",
+				"examples/vm/selectionsort.vhcl"
+			],
+			[
+				"du",
+				"examples/hcl/dutchflag.hcl"
+			],
+			[
+				"des",
+				"doc/language/Instruction_And_Flow_Control_Dictionaries_V2.txt"
+			],
+			[
+				"sem",
+				"src/compiler/frontend/semantic.py"
+			],
+			[
+				"info",
+				"src/vm/info.py"
+			],
+			[
+				"vm",
+				"src/vm/main.py"
+			],
+			[
+				"atom",
+				"src/vm/atomic.py"
+			],
+			[
+				"infere",
+				"doc/language/Inference_Rules.txt"
+			],
+			[
+				"tab",
+				"src/vm/tabulate.py"
+			],
+			[
+				"uti",
+				"src/vm/utilities.py"
+			],
+			[
+				"ea",
+				"examples/hcl/example4.hcl"
+			],
+			[
+				"example4",
+				"examples/hcl/example4.hcl"
+			],
+			[
+				"par",
+				"src/compiler/frontend/parser.py"
+			],
+			[
+				"pa",
+				"src/compiler/frontend/parser.py"
+			],
+			[
+				"ty",
+				"doc/language/TYPE_Inference_Rules.txt"
+			],
+			[
+				"descr",
+				"doc/language/Instruction_And_Flow_Control_Dictionaries.txt"
+			],
+			[
+				"duth",
+				"examples/hcl/dutchflag.hcl"
+			],
+			[
+				"instr",
+				"doc/language/Instruction_And_Flow_Control_Dictionaries.txt"
+			],
+			[
+				"in",
+				"doc/language/Instruction_And_Flow_Control_Dictionaries.txt"
+			],
+			[
+				"ins",
+				"doc/language/Instruction_And_Flow_Control_Dictionaries.txt"
+			],
+			[
+				"le",
+				"src/compiler/frontend/lexer.py"
+			],
+			[
+				"seman",
+				"src/compiler/frontend/semantic.py"
+			],
+			[
+				"example",
+				"examples/hcl/example1.hcl"
+			],
+			[
+				"lexe",
+				"src/compiler/frontend/lexer.py"
+			],
+			[
+				"ex",
+				"examples/hcl/example1.hcl"
+			],
+			[
+				"llta",
+				"src/compiler/frontend/ll_table.py"
+			],
+			[
+				"todo",
+				"TODO.txt"
+			],
+			[
+				"examp",
+				"examples/hcl/example1.hcl"
+			],
+			[
+				"example1",
+				"examples/hcl/example1.hcl"
+			],
+			[
+				"re",
+				"README.md"
+			],
+			[
+				"admin",
+				"dist/css/AdminLTE.css"
+			],
+			[
+				"parser",
+				"src/compiler/frontend/parser.py"
+			],
+			[
+				"web_s",
+				"model/request_handler/web_socket.py"
+			],
+			[
+				"tables",
+				"static/js/tables.js"
+			],
+			[
+				"web",
+				"static/js/websockets.js"
+			],
+			[
+				"lista",
+				"static/listaOperaciones.html"
+			],
+			[
+				"oper",
+				"model/vos/operacion.py"
+			],
+			[
+				"consul",
+				"model/dao/consulta_dao.py"
+			],
+			[
+				"cons",
+				"model/dao/consulta_dao.py"
+			],
+			[
+				"opera",
+				"model/request_handler/operacion.py"
+			],
+			[
+				"table",
+				"static/js/tables.js"
+			],
+			[
+				"lis",
+				"static/listaPuntosAtencion.html"
+			],
+			[
+				"tabl",
+				"static/js/tables.js"
+			],
+			[
+				"operac",
+				"model/request_handler/operacion.py"
+			],
+			[
+				"list",
+				"static/listaOperaciones.html"
+			],
+			[
+				"publis",
+				"model/queue_client/publisher.py"
+			],
+			[
+				"banca",
+				"model/fachada/bancandes.py"
+			],
+			[
+				"clien",
+				"model/queue_client/client.py"
+			],
+			[
+				"pag",
+				"static/pagoNomina.html"
+			],
+			[
+				"pago",
+				"static/pagoNomina.html"
+			],
+			[
+				"selec",
+				"static/js/selector.js"
+			],
+			[
+				"registrarno",
+				"static/registrarNomina.html"
+			],
+			[
+				"forms",
+				"static/js/forms.js"
+			],
+			[
+				"registraroperacionca",
+				"static/registrarOperacionCuentaCajero.html"
+			],
+			[
+				"registraropera",
+				"static/registrarOperacionCuenta2.html"
+			],
+			[
+				"schema",
+				"schema.sql"
+			],
+			[
+				"registaroperacion",
+				"static/registrarOperacionCuentaCajero.html"
+			],
+			[
+				"registraroper",
+				"static/registrarOperacionCuenta1.html"
+			],
+			[
+				"operaciones",
+				"static/listaOperaciones.html"
+			],
+			[
+				"consulta",
+				"model/dao/consulta_dao.py"
+			],
+			[
+				"main.",
+				"static/js/main.js"
+			],
+			[
+				"wb",
+				"model/request_handler/web_socket.py"
+			],
+			[
+				"dao",
+				"model/dao/consulta_dao.py"
+			],
+			[
+				"mai",
+				"static/js/main.js"
+			],
+			[
+				"publs",
+				"model/queue_client/publisher.py"
+			],
+			[
+				"client",
+				"model/queue_client/client.py"
+			],
+			[
+				"cliente",
+				"static/cliente-menu.html"
+			],
+			[
+				"registro_",
+				"model/request_handler/registrar_op_cuenta.py"
+			],
+			[
+				"services",
+				"src/myso.web/src/main/webapp/src/js/services.js"
+			],
+			[
+				"cont",
+				"src/myso.web/src/main/webapp/src/js/controllers.js"
+			],
+			[
+				"emplea",
+				"model/vos/empleado.py"
+			],
+			[
+				"cuenta",
+				"model/vos/cuenta.py"
+			],
+			[
+				"operan",
+				"model/vos/operacion.py"
+			],
+			[
+				"operacion",
+				"model/request_handler/operacion.py"
+			],
+			[
+				"listacons",
+				"static/listConsignaciones.html"
+			],
+			[
+				"inter",
+				"misc/integrity_tests.py"
+			],
+			[
+				"bac",
+				"model/fachada/bancandes.py"
+			],
+			[
+				"reali",
+				"static/registrarPuntoAtencion.html"
+			],
+			[
+				"puntos",
+				"model/vos/puntos_atencion.py"
+			],
+			[
+				"oficinas",
+				"model/request_handler/oficinas.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 259.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
