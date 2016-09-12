@@ -10,7 +10,7 @@ def register_user(cur, user):
     stmt_1 = u'SELECT COUNT(*) FROM PERSONS'
     stmt_2 = u"""INSERT INTO PERSONS(id, name, birth_day, second_name, 
     last_name, country, city, address, zip, phone, email) VALUES
-    (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+    (:1, :2, :3, :4, :5, :6, :7, :8, :9, :10, :11)
     """
     keys = ["id", "name", "birth_day", "second_name", "last_name", 
             "country", "city", "address", "zip", "phone", "email"]

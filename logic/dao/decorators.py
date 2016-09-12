@@ -17,7 +17,7 @@ def returnobj(func=None, add_ret=False):
            cur, values, r = func(*args, **kwargs)
         # print cur.description
         t = time.time()
-        col_names = [col.name for col in cur.description]
+        col_names = [col.name.lower() if not isinstance(col, tuple) else col[0].lower() for col in cur.description]
         values = map(lambda x: dict(zip(col_names, map(str, x))), values)
         print "Conversion time: %g" % (time.time()-t)
         # print values

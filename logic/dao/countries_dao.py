@@ -15,7 +15,7 @@ def get_countries(cur):
 
 @returnobj
 def get_country(cur, iso_code):
-    stmt = 'SELECT * FROM COUNTRIES WHERE iso_code = %s'
+    stmt = 'SELECT * FROM COUNTRIES WHERE iso_code = :1'
     cur.execute(stmt, (iso_code,))
     value = cur.fetchall()
     return cur, value

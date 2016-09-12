@@ -7,7 +7,6 @@ import utils
 import tornado.web
 import tornado.escape
 from decorators import returnobj
-from psycopg2.extensions import AsIs
 
 @returnobj
 def get_flight_count(cur):
@@ -21,9 +20,9 @@ def get_flights(cur, col_name, start, length, order):
     stmt = """
     SELECT * FROM FLIGHTS
     ORDER BY %s %s
-    LIMIT %s OFFSET %s          
+    OFFSET :1 ROWS FETCH NEXT :2 ROWS ONLY         
     """
-    cur.execute(stmt, (AsIs(col_name), AsIs(order), length, start))
+    cur.execute(stmt % (col_name, order), (length, start))
     values = cur.fetchall()
     return cur, values
 
@@ -41,33 +40,34 @@ def get_flights_from_to_date(cur, data, col_name, start, length, order):
      FROM flights f, airports a, airlines air, weekdays d
      WHERE
         f.departure_airport = a.iata_code AND
-        f.departure_day = d.number AND
+        f.departure_day = d.num AND
         f.airline = air.iata_code AND
-        a.city LIKE %s AND
-        d.name LIKE %s) z
+        a.city LIKE :1 AND
+        d.name LIKE :2) z
     INNER JOIN
     (SELECT iata_code as arrival_airport_code, 
             full_name as arrival_airport_name,
             city as arrival_city
     FROM airports
-    WHERE city LIKE %s) k
+    WHERE city LIKE :3) k
     ON z.arrival_airport_code = k.arrival_airport_code
     ORDER BY %s %s
-    LIMIT %s OFFSET %s
+    OFFSET :4 ROWS FETCH NEXT :5 ROWS ONLY
     """
     t = time.time()
-    cur.execute(stmt, ('%'+data['from']+'%', '%'+data['day']+'%', 
-                       '%'+data['to']+'%', AsIs(col_name),
-                       AsIs(order), length, start))
+    stmt = stmt % (col_name, order)
+    params = ('%'+data['from']+'%', '%'+data['day']+'%', 
+              '%'+data['to']+'%', length, start)
+    cur.execute(stmt, params)
     values = cur.fetchall()
     values = utils.obj_conv(cur, values)
     print "Time Elapsed: %g" % (time.time()-t)
-    query = cur.query
+    query = cur.statement
     print query
     query = '\n'.join(query.split('\n')[0:-2])
     t = time.time()
     # print query
-    total = utils.get_query_size(cur, query)
+    total = utils.get_query_size(cur, query, params[0:-2])
     print "Time Elapsed: %g" % (time.time()-t)
     return values, total
 
