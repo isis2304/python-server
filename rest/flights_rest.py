@@ -27,7 +27,7 @@ class MainHandler(tornado.web.RequestHandler):
     def post(self):
         print(self.request)
         draw = self.json_args['draw']
-        start = self.json_args['start']
+        start = self.json_args['start']+1
         length = self.json_args['length']
         order = self.json_args['order'][0]['dir']
         ind_column = self.json_args['order'][0]['column']
