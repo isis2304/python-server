@@ -23,7 +23,8 @@ import rest
 REST = [
 (r"/api/countries(/?([A-Z]{2})?)", rest.countries_rest.MainHandler),
 (r'/api/flights', rest.flights_rest.MainHandler),
-(r'/api/users', rest.users_rest.MainHandler)
+(r'/api/users', rest.users_rest.MainHandler),
+(r'/api/videos', rest.videos_rest.MainHandler)
 ]
 
 # Define new web rendering route associations

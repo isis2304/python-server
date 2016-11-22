@@ -2,6 +2,7 @@
 
 import os
 import sys
+import dtm
 import json
 import datetime
 import tornado.web
@@ -41,4 +42,16 @@ def register_user(user):
     conn = db.get_instance()
     result = yield conn.run_transaction(users.register_user, user)
     raise tornado.gen.Return(result)
+
+@tornado.gen.coroutine
+def get_videos_local():
+    result = {"videos":[{'id':1, 'name':'Empire Strikes Back', 'duration':120}, {'id':2, 'name':'Dr Strangelove', 'duration':120}]}
+    raise tornado.gen.Return(result)
+
+@tornado.gen.coroutine
+def get_videos(mq):
+    videos_loc = yield get_videos_local()
+    videos_remote = yield dtm.request_videos_remote(mq)
+    videos_loc['videos'] += videos_remote
+    raise tornado.gen.Return(videos_loc)     
 

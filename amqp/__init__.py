@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
 """
-logic module
+ampq module
 =========
 
 Provides:
-    1. Single point of entry to SQL transactions and connections
-    2. Execution of SQL statements
-    3. Execution of distributed transactions
+    1. Asynchronous interface for connecting to a RDBMS service
+    2. Asynchronous execution of SQL transactions and queries
 
 How to use the documentation
 ----------------------------
@@ -18,14 +17,11 @@ Copyright (c) 2016, Edgar A. Margffoy.
 MIT, see LICENSE for more details.
 """
 
-
-import tm
 import os
 import sys
-import mq
-import dtm
+import client
 
 __version__ = '1.0.0'
-__all__ = ["tm", "mq"]
+__all__ = ["client"]
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', '..'))

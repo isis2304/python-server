@@ -23,6 +23,7 @@ import sys
 import countries_rest
 import flights_rest
 import users_rest
+import videos_rest
 
 __version__ = '1.0.0'
 

@@ -7,9 +7,8 @@ import logging
 import hashlib
 import datetime
 from pika import adapters
-from model.vos import operacion
-from model.fachada import bancandes
 
+APP = 'app2'
 
 class ExampleConsumer(object):
     """This == an example consumer that will handle unexpected interactions
@@ -24,12 +23,12 @@ class ExampleConsumer(object):
     commands that were issued and that should surface in the output as well.
 
     """
-    EXCHANGE = 'transactions'
+    EXCHANGE = 'videos.test'
     EXCHANGE_TYPE = 'topic'
-    QUEUE = 'llamabank'
-    ROUTING_KEY = 'bancandes.requests'
+    QUEUE = 'app2'
+    ROUTING_KEY = ['videos.general.app2', 'videos.general']
 
-    def __init__(self, logger, publisher, amqp_url='amqp://llamabank:123llama123@margffoy-tuay.com:5672'):
+    def __init__(self, logger, amqp_url, routing_info):
         """Create a new instance of the consumer class, passing in the AMQP
         URL used to connect to RabbitMQ.
 
@@ -43,9 +42,11 @@ class ExampleConsumer(object):
         self._consumer_tag = None
         self._url = amqp_url
         self.logger = logger
-        self.publisher = publisher
-        self._outdb = bancandes.BancAndes.dar_instancia()
-        self._outdb.inicializar_ruta('data/connection')
+        self.routing = routing_info
+        self.callbacks = {}
+        # self.publisher = publisher
+        # self._outdb = bancandes.BancAndes.dar_instancia()
+        # self._outdb.inicializar_ruta('data/connection')
 
     def connect(self):
         """This method connects to RabbitMQ, returning the connection handle.
@@ -56,13 +57,14 @@ class ExampleConsumer(object):
 
         """
         self.logger.info('Connecting to %s', self._url)
-        cred = pika.PlainCredentials('llamabank', '123llama123')
+        cred = pika.PlainCredentials('user2', 'password2')
         param = pika.ConnectionParameters(
             host='margffoy-tuay.com',
             port=5672,
-            virtual_host='bancandesh',
+            virtual_host='videos',
             credentials=cred
         )
+        # param =  pika.URLParameters(self._url)
         self._connection = adapters.TornadoConnection(param,
                                           self.on_connection_open)
 
@@ -155,7 +157,8 @@ class ExampleConsumer(object):
         self.logger.info('Channel opened')
         self._channel = channel
         self.add_on_channel_close_callback()
-        self.setup_exchange(self.EXCHANGE)
+        for exchange in self.routing:
+            self.setup_exchange(exchange)
 
     def setup_exchange(self, exchange_name):
         """Setup the exchange on RabbitMQ by invoking the Exchange.Declare RPC
@@ -166,11 +169,11 @@ class ExampleConsumer(object):
 
         """
         self.logger.info('Declaring exchange %s', exchange_name)
-        self._channel.exchange_declare(self.on_exchange_declareok,
+        self._channel.exchange_declare(lambda x: self.on_exchange_declareok(x, exchange_name),
                                        exchange_name,
                                        self.EXCHANGE_TYPE)
 
-    def on_exchange_declareok(self, unused_frame):
+    def on_exchange_declareok(self, unused_frame, exchange_name):
         """Invoked by pika when RabbitMQ has finished the Exchange.Declare RPC
         command.
 
@@ -178,9 +181,10 @@ class ExampleConsumer(object):
 
         """
         self.logger.info('Exchange declared')
-        self.setup_queue(self.QUEUE)
+        for queue_info in self.routing[exchange_name]:
+            self.setup_queue(queue_info, exchange_name)
 
-    def setup_queue(self, queue_name):
+    def setup_queue(self, queue_info, exchange_name):
         """Setup the queue on RabbitMQ by invoking the Queue.Declare RPC
         command. When it == complete, the on_queue_declareok method will
         be invoked by pika.
@@ -188,10 +192,11 @@ class ExampleConsumer(object):
         :param str|unicode queue_name: The name of the queue to declare.
 
         """
+        queue_name = queue_info['queue']
         self.logger.info('Declaring queue %s', queue_name)
-        self._channel.queue_declare(self.on_queue_declareok, queue_name)
+        self._channel.queue_declare(lambda x: self.on_queue_declareok(x, queue_info, exchange_name), queue_name)
 
-    def on_queue_declareok(self, method_frame):
+    def on_queue_declareok(self, method_frame, queue_info, exchange_name):
         """Method invoked by pika when the Queue.Declare RPC call made in
         setup_queue has completed. In this method we will bind the queue
         and exchange together with the routing key by issuing the Queue.Bind
@@ -201,10 +206,11 @@ class ExampleConsumer(object):
         :param pika.frame.Method method_frame: The Queue.DeclareOk frame
 
         """
-        self.logger.info('Binding %s to %s with %s',
-                    self.EXCHANGE, self.QUEUE, self.ROUTING_KEY)
-        self._channel.queue_bind(self.on_bindok, self.QUEUE,
-                                 self.EXCHANGE, self.ROUTING_KEY)
+        for key in queue_info['routing']:
+            self.logger.info('Exchange %s: Binding %s with %s',
+                        exchange_name, queue_info['queue'], key)
+            self._channel.queue_bind(lambda x: self.on_bindok(x, queue_info), queue_info['queue'],
+                                     exchange_name, key)
 
     def add_on_cancel_callback(self):
         """Add a callback that will be invoked if RabbitMQ cancels the consumer
@@ -245,39 +251,6 @@ class ExampleConsumer(object):
     def remove_listener(self, sec):
         del self._listeners[sec]
 
-    def init_transaction(self, msg):
-        print msg
-        op_type = 3
-        if msg['tipo'] == "consignar":
-            op_type = 4
-
-        can = self._outdb.verificar_transaccion_cuenta(msg['cuentaOrigen'], msg['monto'], op_type)
-        print can
-        if can:
-            self._outdb.inicializar_estado_externo(msg)
-            self.publisher.publish_message(msg)
-            # self._listeners[msg['id']].notify_client(msg)
-        else:
-            msg['estado'] = 'error'
-            msg['msg'] = "No cuenta con suficientes fondos en la cuenta %d para realizar esta operación" % (msg["cuentaOrigen"])
-            self._listeners[msg['id']].notify_client(msg)
-
-    def init_associate(self, msg):
-        self._outdb.inicializar_estado_externo(msg)
-        self.publisher.publish_message(msg)
-        # self._listeners[msg['id']].notify_client(msg)
-
-    def init_pay(self, msg):
-        self._outdb.inicializar_estado_externo(msg)
-        msg['saldo'] = str(self._outdb.obtener_saldo_cuenta(msg['numCuenta']))
-        self.publisher.publish_message(msg)
-
-    def init_operations(self, msg):
-        self.publisher.publish_message(msg)
-
-
-
-
     def on_message(self, unused_channel, basic_deliver, properties, body):
         """Invoked by pika when a message == delivered from RabbitMQ. The
         channel == passed for your convenience. The basic_deliver object that
@@ -295,179 +268,41 @@ class ExampleConsumer(object):
         self.acknowledge_message(basic_deliver.delivery_tag)
         self.logger.info('Received message # %s from %s: %s',
                     basic_deliver.delivery_tag, properties.app_id, body)
-        #Aquí inicia el procesamiento!
-        #{“estado”: <”comienzo”|”confirmacion”|”error”>, “id”: nId, “tipo”: <“consignar”|”retirar”>, 
-        #“monto”: nMonto, “cuentaDestino”: nCDestino, “cuentaOrigen”: nCOrigen}
 
-        #{“estado”: <”comienzo”|”confirmacion”|”error”>“id”: nId, “tipo”: “asociar”, “cuentaOrigen”: nCOrigen, 
-        #“bancoOrigen”: <”bancandes”|”llamabank”> “cuentaDestino”: nCDestino, “bancoDestino”:  <”bancandes”|”llamabank”>, 
-        #“nombreEmpleado”:nNombre, “valor”: nValor, “frecuencia”:<”mensual”|”quincenal”>}
+        print basic_deliver
 
         dic = json.loads(body)
         print dic
-        regCuenta = False
-        notify = False
+        properties = pika.BasicProperties(app_id='app2',
+                                          content_type='application/json',
+                                          headers={'JMSType':'TextMessage'})
+        if dic[u'sender'] != u'app2':
+            payload = {"videos":[{'id':1, 'name':'Empire Strikes Back', 'duration':120}, {'id':2, 'name':'Dr Strangelove', 'duration':120}]}
+            message = {'routingKey':'', 'sender':'app2', 'payload':json.dumps(payload, ensure_ascii=False), 'status':'REQUEST_ANSWER'}
 
-        print dic['estado']
-        print dic[u'estado']
-        print dic['tipo']
-        print dic[u'tipo']
-
-        if dic[u'estado'] == u'comienzo':
-            if dic[u'tipo'] == u'consignar':
-                tipo = 3
-                regCuenta = True
-            elif dic[u'tipo'] == u'retirar':
-                tipo = 4
-                regCuenta = True
-            elif dic[u'tipo'] == u'asociar':
-                print "empieza proceso de asociar"
-                dic[u'estado'] = u'confirmacion'
-                cuenta_nat = dic[u'cuentaDestino']
-                existe = self._outdb.existe_cuenta(cuenta_nat)
-                if not existe:
-                    dic[u'estado'] = u'error'
-                else:
-                    if dic[u'frecuencia'] == u"mensual":
-                        frecuencia = 1
-                    else:
-                        frecuencia = 2
-
-                    ret = self._outdb.actualizar_nomina_ext(dic[u'cuentaOrigen'], cuenta_nat, dic['valor'], frecuencia)
-
-                    if not ret[0]:
-                        dic[u'estado'] = u'error'
-                print ("justo antes de enviar mensaje")
-                self.publisher.publish_message(dic)
-            elif dic[u'tipo'] == u'pagar':
-                print "empieza proceso de pago"
-                cuentaJ = dic[u'numCuenta']
-                saldo = dic [u'saldo']
-                ok, _list, saldo = self._outdb.pagar_nomina_ext(cuentaJ, saldo)
-                dic['saldo'] = str(saldo)
-                if not ok:
-                    dic['estado'] = 'error'
-                    dic['cuentas'] = _list
-                else:
-                    dic['estado'] = 'confirmacion'
-                self.publisher.publish_message(dic)
-
-
-            elif dic[u'tipo'] == u'consultaOp':
-                params = {'client':False, 'account':False, 'loan':False, 
-                      'op_type':-1,
-                      'last_movement':[self.from_timestamp(str(dic['fechaIni'])),self.from_timestamp(str(dic['fechaFin']))],
-                      'sum':[dic['valorMin'], dic['valorMax']],
-                      'pa':[None, None],
-                      'search_term':"",
-                      'negate':False}
-                perm = {'ggeneral':True, 'goficina':False, 'cliente':False}
-                search_count, count, cuentas = self._outdb.obtener_operacionL('numero','asc', 0, 100, perm, params, None)
-                cuentas = map(lambda x: x.dict_repr(), cuentas)
-                cuentas = [dict(zip(j.keys(), [str(j[i]) for i in j])) for j in cuentas]
-                dic['operaciones'] = cuentas
-                dic[u'tipo'] = u'respuestaOp'
-                self.publisher.publish_message(dic)
-                
-
-
-            elif dic[u'tipo'] == u'respuestaOp':
-                self._listeners[dic['id']].notify_client(dic)
-
-            elif dic[u'tipo'] == u'consultaPA':
-                 params = {'client':False, 'account':False, 'loan':False, 
-                      'op_type':-1,
-                      'last_movement':[None, None],
-                      'sum':[None, None],
-                      'pa':[dic['punto1'], dic['punto2']],
-                      'search_term':"",
-                      'negate':False}
-                 perm = {'ggeneral':True, 'goficina':False, 'cliente':False}
-                 search_count, count, cuentas = self._outdb.obtener_operacionL('numero','asc', 0, 100, perm, params, None)
-                 cuentas = map(lambda x: x.dict_repr(), cuentas)
-                 cuentas = [dict(zip(j.keys(), [str(j[i]) for i in j])) for j in cuentas]
-                 dic['pas'] = cuentas
-                 dic[u'tipo'] = u'respuestaOp' 
-                 self.publisher.publish_message(dic)
-
-
-            elif dic[u'tipo'] == u'respuestaPA':
-                dic['operaciones'] = dic['pas']
-                self._listeners[dic['id']].notify_client(dic)
-                
-
-
-
-            if regCuenta:
-                print ("empieza proceso transferencia de cuentas")
-                numero = self._outdb.generar_numero_operacion()
-                idPuntoAtencion = '3'
-                cajero = 'NULL'
-                numeroCuenta = dic[u'cuentaDestino']
-                existe = self._outdb.existe_cuenta(numeroCuenta)
-                if existe:
-                    cliente = self._outdb.duenio_cuenta(numeroCuenta)
-                    monto = dic[u'monto']
-                    oper = operacion.Operacion(numero,tipo,cliente,monto,idPuntoAtencion, cajero, numeroCuenta, str(datetime.date.today()))
-                    pudo = self._outdb.registrar_operacion_cuenta(oper)
-                    if pudo:
-                        dic[u'estado'] = u'confirmacion'
-                    else:
-                        dic[u'estado'] = u'error'
-                    print "justo antes de publicar mensaje"
-                    self.publisher.publish_message(dic)
-
-
-        elif dic[u'estado'] == u'confirmacion':
-            notify = True
-            if dic[u'tipo'] == u'consignar':
-                tipo = "3"
-                regCuenta = True
-            elif dic[u'tipo'] == u'retirar':
-                tipo = "4"
-                regCuenta = True
-            elif dic[u'tipo'] == u'pagar':
-                self._outdb.actualizar_saldo_cuenta(dic['numCuenta'], dic['saldo'])
-
-
-            if regCuenta:
-                numero = self._outdb.generar_numero_operacion()
-                idPuntoAtencion = '3'
-                cajero = 'NULL'
-                numeroCuenta = dic[u'cuentaOrigen']
-                existe = self._outdb.existe_cuenta(numeroCuenta)
-                if existe:
-                    cliente = self._outdb.duenio_cuenta(numeroCuenta)
-                    monto = dic[u'monto']
-                    oper = operacion.Operacion(numero,tipo,cliente,monto,idPuntoAtencion, cajero, numeroCuenta, str(datetime.date.today()))
-                    pudo = self._outdb.registrar_operacion_cuenta_externo(oper)
-                    print pudo
-                    if isinstance(pudo, str):
-                        dic[u'estado'] = u'error'
-                        dic[u'msg'] = u"Ha ocurrido un error mientras se realizaba la operación"
-                        
-
-        elif dic[u'estado'] == u'error':
-            dic[u'msg'] = "Ha ocurrido un error mientras se realizaba la operación"
-            if dic[u'tipo'] == u'pagar':
-                self._outdb.actualizar_saldo_cuenta(dic['numCuenta'], dic['saldo'])
-
-        if notify:
-            try:
-                self._listeners[dic[u'id']].notify_client(dic)
-            except KeyError:
-                id_cliente = self._outdb.obtener_id_transaccion(dic[u'id'])
-                print id_cliente
-                if dic[u'estado'] == u'error':
-                    msg = u"La transacción externa con número de confirmación "+dic[u'id']+u" no pudo llevarse a cabo."
-                else:
-                    msg = u"La transacción externa con número de confirmación "+dic[u'id']+u" se llevó a cabo exitosamente."
-                self._outdb.notificar(id_cliente,msg)
-            self._outdb.actualizar_estado_externo(dic[u'id'], dic[u'estado'])
-
-
-        
+        # {u'status': u'REQUEST', u'routingKey': u'videos.general.app1', u'payload': u'', u'routingkey': u'videos.general.app1', u'sender': u'app1'}
+            self._channel.basic_publish(self.EXCHANGE, dic['routingKey'],
+                                        json.dumps(message, ensure_ascii=False),
+                                        properties)
+        print dic
      
+
+    def send_message(self, payload, exchange, _from, to, status, _id=hashlib.md5('app2'+str(time.time())).hexdigest()[0:7]):
+        self.logger.info('Exchange: %s - Sending reply to %s',
+                    exchange, to)
+
+        message = {'routingKey':_from, 'sender':APP, 'payload':json.dumps(payload, ensure_ascii=False), 'status':status, 'msgId':_id}
+        print message
+        properties = pika.BasicProperties(app_id='app2',
+                                          content_type='application/json',
+                                          headers={'JMSType':'TextMessage'})
+
+        self._channel.basic_publish(exchange, to,
+                                    json.dumps(message, ensure_ascii=False),
+                                    properties)
+        print "Message Sent!"
+        return _id
+
 
     def on_cancelok(self, unused_frame):
         """This method == invoked by pika when RabbitMQ acknowledges the
@@ -490,7 +325,7 @@ class ExampleConsumer(object):
             self.logger.info('Sending a Basic.Cancel RPC command to RabbitMQ')
             self._channel.basic_cancel(self.on_cancelok, self._consumer_tag)
 
-    def start_consuming(self):
+    def start_consuming(self, queue_info):
         """This method sets up the consumer by first calling
         add_on_cancel_callback so that the object == notified if RabbitMQ
         cancels the consumer. It then issues the Basic.Consume RPC command
@@ -500,10 +335,33 @@ class ExampleConsumer(object):
         will invoke when a message == fully received.
 
         """
+        def on_message_wrap(unused_channel, basic_deliver, properties, body, callback):
+            self.acknowledge_message(basic_deliver.delivery_tag)
+            self.logger.info('Received message # %s from %s: %s',
+                    basic_deliver.delivery_tag, properties.app_id, body)
+            envelope = json.loads(body)
+            _from = envelope['sender']
+            _id = envelope['msgId']
+            status = envelope['status']
+            to = envelope['routingKey']
+            print _id, _from, status, to
+            payload = ""
+            if envelope['payload'] != "":
+                payload = json.loads(envelope['payload'])
+            callback(self, _id, _from, status, to, payload)
+            # {"routingkey":"videos.general.app1","sender":"app1","payload":"","status":"REQUEST","msgId":"75E4EC74","routingKey":"videos.general.app1"
+            # _id, _from, status, to, message
+            # message = {'routingKey':'', 'sender':'app2', 'payload':json.dumps(payload, ensure_ascii=False), 'status':'REQUEST_ANSWER'}            
+
+
         self.logger.info('Issuing consumer related RPC commands')
         self.add_on_cancel_callback()
-        self._consumer_tag = self._channel.basic_consume(self.on_message,
-                                                         self.QUEUE)
+
+        # self.callbacks[queue_info['queue']] = queue_info['listener']
+        listener_func = lambda x, y, z, w: on_message_wrap(x, y, z, w, queue_info['listener'])
+
+        self._consumer_tag = self._channel.basic_consume(listener_func,
+                                                         queue_info['queue'])
 
     def from_timestamp(self, date):
         if date != '':
@@ -512,7 +370,7 @@ class ExampleConsumer(object):
         else:
             return None
 
-    def on_bindok(self, unused_frame):
+    def on_bindok(self, unused_frame, queue_info):
         """Invoked by pika when the Queue.Bind method has completed. At this
         point we will start consuming messages by calling start_consuming
         which will invoke the needed RPC commands to start the process.
@@ -521,7 +379,7 @@ class ExampleConsumer(object):
 
         """
         self.logger.info('Queue bound')
-        self.start_consuming()
+        self.start_consuming(queue_info)
 
     def close_channel(self):
         """Call to close the channel with RabbitMQ cleanly by issuing the

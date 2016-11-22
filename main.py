@@ -4,6 +4,7 @@ import os
 import sys
 import routes
 import logging
+import listeners
 import cx_Oracle
 import coloredlogs
 import tornado.web
@@ -12,9 +13,12 @@ import db.dbconn as db
 from tornado import gen
 import tornado.platform.twisted
 tornado.platform.twisted.install()
+from amqp import client, publisher
 from toradbapi import ConnectionPool
 from twisted.internet import reactor
 
+
+AMQP_URL = 'amqp://user2:pasword2@margffoy-tuay.com:5672/videos'
 
 URL = 'fn3.oracle.virtual.uniandes.edu.co'
 PORT = 1521
@@ -42,6 +46,14 @@ def main():
                                           debug=True, serve_traceback=True, autoreload=True, **settings)
     print "Server is now at: 127.0.0.1:8000"
     ioloop = tornado.ioloop.IOLoop.instance()
+    
+    # pc = publisher.ExamplePublisher(LOGGER)
+    outq = client.ExampleConsumer(LOGGER, AMQP_URL, listeners.LISTENERS)
+    application.outq = outq
+    # application.pc = pc
+    # application.pc.connect()
+    application.outq.connect()
+    
     # db.initialize_db('psycopg2', cp_noisy=True, user=USER, password=PASSWORD,
                      # database=DATABASE, host=HOST, cursor_factory=psycopg2.extras.DictCursor)
     db.initialize_db('cx_Oracle', cp_noisy=True, user=USER, password=PASSWORD, dsn=dsn_tns)
