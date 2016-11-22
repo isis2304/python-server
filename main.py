@@ -18,7 +18,7 @@ from toradbapi import ConnectionPool
 from twisted.internet import reactor
 
 
-AMQP_URL = 'amqp://user2:pasword2@margffoy-tuay.com:5672/videos'
+AMQP_URL = 'amqp://user2:password2@margffoy-tuay.com:5672/videos'
 
 URL = 'fn3.oracle.virtual.uniandes.edu.co'
 PORT = 1521

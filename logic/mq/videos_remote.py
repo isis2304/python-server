@@ -41,7 +41,7 @@ def get_videos(mq):
     yield tornado.gen.sleep(timeout)
     response = results.pop(_id)
     response = [x['videos'] for x in response]
-    response = reduce(lambda x, y: x+y, response)
+    response = reduce(lambda x, y: x+y, response, [])
     print response
     raise tornado.gen.Return(response)
 

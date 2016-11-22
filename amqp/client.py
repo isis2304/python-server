@@ -57,14 +57,21 @@ class ExampleConsumer(object):
 
         """
         self.logger.info('Connecting to %s', self._url)
-        cred = pika.PlainCredentials('user2', 'password2')
-        param = pika.ConnectionParameters(
-            host='margffoy-tuay.com',
-            port=5672,
-            virtual_host='videos',
-            credentials=cred
-        )
-        # param =  pika.URLParameters(self._url)
+        
+        # amqp://user2:pasword2@margffoy-tuay.com:5672/videos
+        # _, info = self._url.split('amqp://')
+        # info, vhost = info.split('/')
+        # user, server = info.split('@')
+        # username, password = user.split(':')
+        # host, port = server.split(':')
+        # cred = pika.PlainCredentials(username, password)
+        # param = pika.ConnectionParameters(
+        #     host=host,
+        #     port=int(port),
+        #     virtual_host=vhost,
+        #     credentials=cred
+        # )
+        param =  pika.URLParameters(self._url)
         self._connection = adapters.TornadoConnection(param,
                                           self.on_connection_open)
 
